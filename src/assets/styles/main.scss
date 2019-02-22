@@ -1,0 +1,225 @@
+/* Font connection */
+
+@font-face {
+    font-family: 'Jaapokkisubtract';
+    src: url("../fonts/JaapokkisubtractRegular.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/JaapokkisubtractRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/JaapokkisubtractRegular.woff2") format("woff2"), url("../fonts/JaapokkisubtractRegular.woff") format("woff"), url("../fonts/JaapokkisubtractRegular.ttf") format("truetype"), url("../fonts/JaapokkisubtractRegular.svg") format("svg"); /* Legacy iOS */
+    // url('../fonts/JaapokkisubtractRegular#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/* Specification */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #0001c5;
+    letter-spacing: 0.06em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Jaapokkisubtract', sans-serif;
+    letter-spacing: 0.14em;
+    font-weight: normal;
+    line-height: 1.25em;
+}
+
+.jpk-font {
+    font-family: 'Jaapokkisubtract', sans-serif;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    background: #0304b9 url(../images/first_bg.png) no-repeat center (bottom / cover);
+}
+
+.bookmark {
+    position: absolute;
+    display: block;
+    background-color: #ffffff;
+    width: 1em;
+    padding: 0.6em;
+    top: 0;
+    left: 55%;
+    font-size: 18px;
+    line-height: 1.3em;
+    text-align: center;
+    color: #0304b9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0 0.6em rgba(255, 255, 255, 0.8);
+    }
+}
+
+.container {
+    padding: 4% 8%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #0000a0;
+    display: block;
+    background-color: #ffffff;
+    font-size: 25px;
+    width: 1.9em;
+    height: 1.9em;
+    line-height: 2.2em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0 0.6em rgba(255, 255, 255, 0.8);
+    }
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 41px;
+    height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+
+    & > span {
+        background-color: #ffffff;
+        display: block;
+        width: 100%;
+        height: 10%;
+
+        &:nth-child(2) {
+            width: 75%;
+        }
+
+        &:nth-child(3) {
+            width: 50%;
+        }
+    }
+
+    &:hover {
+        align-items: flex-start;
+    }
+}
+
+h1 {
+    font-size: 55px;
+    line-height: 69px;
+    color: #ffffff;
+}
+
+button {
+    font-family: 'Jaapokkisubtract', sans-serif;
+    color: #ffffff;
+    background-color: transparent;
+    border: 0.15em solid #fff;
+    padding: 0.7em 2.8em;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: #0001c5;
+        background-color: #fff;
+    }
+}
+
+.hero {
+    &__left {
+        position: relative;
+
+        &__motto {
+            position: absolute;
+            font-size: 18vw;
+            color: #1b1cc4;
+        }
+
+        &__slogan {
+            & > h1 {
+                position: absolute;
+                top: 2.3em;
+                left: 3em;
+                font-size: 3vw;
+                line-height: 1.7em;
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 3.6em;
+                    content: "";
+                    display: block;
+                    border-bottom: 0.1em solid #fff;
+                    width: 0.6em;
+                }
+            }
+        }
+
+        &__description {
+            position: absolute;
+            top: 38vh;
+            left: 10vw;
+            font-size: 17px;
+            width: 21em;
+            font-family: Roboto;
+            color: #ffffff;
+            line-height: 2em;
+            letter-spacing: 0.05em;
+        }
+
+        &__contact_button {
+            position: absolute;
+            top: 55vh;
+            left: 15vw;
+            font-size: 20px;
+            text-transform: lowercase;
+        }
+    }
+
+    &__right {
+        position: absolute;
+        top: 20vh;
+        right: 5vw;
+        margin: 0;
+        padding: 0;
+        font-size: 20vw;
+        color: #fff;
+        width: 1.4em;
+        height: 1.4em;
+        letter-spacing: 0.1em;
+        line-height: 0.7em;
+        text-shadow: 0.05em 0.05em 0 #0309a1;
+
+        & > span {
+            color: #0048ff;
+        }
+    }
+}
+
+.scrolldown {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 15%;
+    width: 2.5em;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 27px;
+    padding: 1em 1.5em 3em 0;
+    border-right: 3px solid #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: #ffffff;
+        color: #0000a0;
+    }
+}
