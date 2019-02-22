@@ -197,6 +197,7 @@ button {
         height: 1.4em;
         letter-spacing: 0.1em;
         line-height: 0.7em;
+        overflow: hidden;
         text-shadow: 0.05em 0.05em 0 #0309a1;
 
         & > span {
