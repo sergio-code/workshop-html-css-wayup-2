@@ -7,6 +7,6 @@ Project for learning CSS (unusual template)
  - [PSD file](https://wayup.in/lm/load/lm65)
 
 ## Preview
-https://CHANGE-ME.surge.sh/
+https://wayup-ws-next.surge.sh/
 
 ![Screenshot](change-me)
