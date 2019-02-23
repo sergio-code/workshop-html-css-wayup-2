@@ -28,5 +28,8 @@
         "webpack-chunk-hash": "^0.6.0",
         "webpack-cli": "^3.2.3",
         "webpack-dev-server": "^3.1.14"
+    },
+    "dependencies": {
+        "jquery": "^3.3.1"
     }
 }

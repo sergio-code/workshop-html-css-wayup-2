@@ -8,6 +8,9 @@ const WebpackChunkHash = require("webpack-chunk-hash")
 module.exports = {
     target: "web",
     // externals: [nodeExternals()],  // for target: "node"
+    externals: {
+        jquery: 'jQuery'
+    },
     devServer: {
         // Parse host and port from env to allow customization.
         host: process.env.HOST || "localhost", // Defaults to `localhost`
