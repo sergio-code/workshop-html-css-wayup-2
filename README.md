@@ -6,7 +6,13 @@ Project for learning CSS (unusual template)
  - [Video lesson (YouTube)](https://www.youtube.com/watch?v=tbFD3gGZ9eA)
  - [PSD file](https://wayup.in/lm/load/lm65)
 
-## Preview
+## Result
 https://wayup-ws-next.surge.sh/
 
-![Screenshot](change-me)
+## Screenshot mobile
+
+![Mobile screenshot](https://i.imgur.com/onkgR62.png)
+
+## Screenshot desktop
+
+![Screenshot](https://i.imgur.com/a2IK3Th.png)
