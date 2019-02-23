@@ -1,10 +1,11 @@
 /* Font connection */
 
+@import "../styles/stroke-gap-icons.css";
+
 @font-face {
     font-family: 'Jaapokkisubtract';
     src: url("../fonts/JaapokkisubtractRegular.eot"); /* IE9 Compat Modes */
     src: url("../fonts/JaapokkisubtractRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/JaapokkisubtractRegular.woff2") format("woff2"), url("../fonts/JaapokkisubtractRegular.woff") format("woff"), url("../fonts/JaapokkisubtractRegular.ttf") format("truetype"), url("../fonts/JaapokkisubtractRegular.svg") format("svg"); /* Legacy iOS */
-    // url('../fonts/JaapokkisubtractRegular#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 /* Specification */
@@ -24,14 +25,41 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.25em;
 }
 
+h1 {
+    font-size: 55px;
+    line-height: 69px;
+    color: #ffffff;
+}
+
+button {
+    font-family: 'Jaapokkisubtract', sans-serif;
+    color: #ffffff;
+    background-color: transparent;
+    border: 0.15em solid #fff;
+    padding: 0.7em 2.6em;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background, color 0.3s ease;
+
+    &:hover {
+        color: #0001c5;
+        background-color: #fff;
+    }
+}
+
 .jpk-font {
     font-family: 'Jaapokkisubtract', sans-serif;
 }
 
 .header {
     position: relative;
+    min-height: 580px;
     height: 100vh;
     background: #0304b9 url(../images/first_bg.png) no-repeat center (bottom / cover);
+    box-shadow: 0 0 250px #0001c5;
+    margin-bottom: 12vmin;
+    padding-top: 5%;
 }
 
 .bookmark {
@@ -41,13 +69,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 1em;
     padding: 0.6em;
     top: 0;
-    left: 55%;
-    font-size: 18px;
+    left: 60%;
+    font-size: 1.3vw;
     line-height: 1.3em;
     text-align: center;
     color: #0304b9;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background, color, box-shadow 0.3s ease;
 
     &:hover {
         box-shadow: 0 0 0.6em rgba(255, 255, 255, 0.8);
@@ -55,7 +83,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-    padding: 4% 8%;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 .nav {
@@ -64,9 +93,56 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+.sidenav {
+    margin: 0;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-width: 0;
+    max-width: 0;
+    transition: 0.5s;
+    padding-top: 5vmax;
+
+    & > * {
+        margin-left: 5vmax;
+        margin-right: 5vmax;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    &__btn_close {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+        font-size: 40px;
+
+        &:hover {
+            background-color: #0001c5;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+}
+
+.sidenav_opened {
+    min-width: 30vw;
+    max-width: 100vw;
+}
+
 .logo {
-    color: #0000a0;
+    z-index: 1;
     display: block;
+    color: #0000a0;
     background-color: #ffffff;
     font-size: 25px;
     width: 1.9em;
@@ -74,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 2.2em;
     text-align: center;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: background, color, box-shadow 0.3s ease;
 
     &:hover {
         box-shadow: 0 0 0.6em rgba(255, 255, 255, 0.8);
@@ -95,6 +171,7 @@ h1, h2, h3, h4, h5, h6 {
         background-color: #ffffff;
         display: block;
         width: 100%;
+        min-height: 2px;
         height: 10%;
 
         &:nth-child(2) {
@@ -111,65 +188,46 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-h1 {
-    font-size: 55px;
-    line-height: 69px;
-    color: #ffffff;
-}
-
-button {
-    font-family: 'Jaapokkisubtract', sans-serif;
-    color: #ffffff;
-    background-color: transparent;
-    border: 0.15em solid #fff;
-    padding: 0.7em 2.8em;
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        color: #0001c5;
-        background-color: #fff;
-    }
-}
-
 .hero {
+    overflow: hidden;
+
     &__left {
-        position: relative;
+        position: absolute;
+        top: 25%;
 
         &__motto {
-            position: absolute;
-            font-size: 18vw;
+            margin: 0;
+            padding: 0;
+            font-size: 17vw;
+            line-height: 0.7em;
+            height: 1em;
+            width: 3em;
             color: #1b1cc4;
         }
 
         &__slogan {
-            & > h1 {
-                position: absolute;
-                top: 2.3em;
-                left: 3em;
-                font-size: 3vw;
-                line-height: 1.7em;
+            position: absolute;
+            top: -0.3em;
+            left: 2.7em;
+            font-size: 3vw;
+            line-height: 1.7em;
 
-                &::after {
-                    position: absolute;
-                    top: 0;
-                    right: 3.6em;
-                    content: "";
-                    display: block;
-                    border-bottom: 0.1em solid #fff;
-                    width: 0.6em;
-                }
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 3.6em;
+                content: "";
+                display: block;
+                border-bottom: 0.1em solid #fff;
+                width: 0.6em;
             }
         }
 
         &__description {
-            position: absolute;
-            top: 38vh;
-            left: 10vw;
+            margin-top: -5vw;
+            margin-left: 25%;
             font-size: 17px;
-            width: 21em;
+            max-width: 21em;
             font-family: Roboto;
             color: #ffffff;
             line-height: 2em;
@@ -177,9 +235,11 @@ button {
         }
 
         &__contact_button {
-            position: absolute;
-            top: 55vh;
-            left: 15vw;
+            // position: absolute;
+            // top: 55vh;
+            // left: 15vw;
+            display: block;
+            margin: 2em auto 0;
             font-size: 20px;
             text-transform: lowercase;
         }
@@ -187,11 +247,11 @@ button {
 
     &__right {
         position: absolute;
-        top: 20vh;
-        right: 5vw;
+        top: 25%;
+        right: 12%;
         margin: 0;
         padding: 0;
-        font-size: 20vw;
+        font-size: 17vw;
         color: #fff;
         width: 1.4em;
         height: 1.4em;
@@ -218,9 +278,158 @@ button {
     padding: 1em 1.5em 3em 0;
     border-right: 3px solid #fff;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: background, color 0.3s ease;
+
     &:hover {
         background-color: #ffffff;
         color: #0000a0;
     }
 }
+
+.services {
+    font-family: 'Jaapokkisubtract', sans-serif;
+    padding-bottom: 15vmin;
+
+    &__title {
+        p {
+            font-size: 23px;
+            color: rgba(0, 1, 197, 0.48);
+        }
+
+        h2 {
+            margin-top: 28px;
+            margin-bottom: 145px;
+            position: relative;
+            font-size: 85px;
+            letter-spacing: 3.4px;
+            padding-left: 0.5em;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0.9em;
+                left: 4.3em;
+                width: 0.3em;
+                display: block;
+                border-bottom: 5px solid #1e1fec;
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+            display: block;
+            position: relative;
+            border: 4px solid #0001c5;
+            color: #0001c5;
+            box-sizing: border-box;
+            width: 20%;
+            padding: 5% 3% 8%;
+            position: relative;
+            cursor: pointer;
+            transition: background, color 0.3s ease;
+
+            i {
+                font-size: 48px;
+            }
+
+            h3 {
+                font-size: 26px;
+                overflow-wrap: break-word;
+            }
+
+            &__index {
+                position: absolute;
+                font-size: 23px;
+                top: 1em;
+                left: -2.3em;
+                color: rgba(0, 1, 197, 0.48);
+            }
+
+            &__more {
+                position: absolute;
+                right: -4px;
+                bottom: -4px;
+                width: 42px;
+                height: 42px;
+                text-align: center;
+                line-height: 1.4em;
+                display: block;
+                text-decoration: none;
+                font-size: 31px;
+                color: #ffffff;
+                background-color: #0001c5;
+            }
+
+            &:hover {
+                background-color: #0001c5;
+                color: #fff;
+
+                .services__items__item__more {
+                    color: #0001c5;
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    font-family: "Roboto", sans-serif;
+    background-color: #ededf8;
+    color: #1e1fec;
+    font-size: 12px;
+    letter-spacing: 0.72px;
+    padding-top: 18vmin;
+    padding-bottom: 18vmin;
+
+    & > .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        & > * {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__logo {
+        color: #ffffff;
+        background-color: #0000a0;
+    }
+
+    &__button {
+        color: #1e1fec;
+        border-color: #1e1fec;
+        font-size: 17px;
+
+        &:hover {
+            color: #fff;
+            border-color: #1e1fec;
+            background-color: #1e1fec;
+        }
+    }
+
+    &__scrollup {
+        display: block;
+        text-decoration: none;
+        font-family: "Arial MT", sans-serif;
+        font-size: 19px;
+        padding: 0 0.5em;
+
+        &:visited {
+            color: #1e1fec;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: #1e1fec;
+        }
+    }
+}
+
+@import "./media.scss";

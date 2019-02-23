@@ -8,13 +8,20 @@
         <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>" />
     </head>
     <body>
+        <nav class="sidenav">
+            <a href="javascript:void(0)" class="sidenav__btn_close cmd_sidenav_close">&times;</a>
+            <button class="button footer__button">contact us</button>
+            <p class="footer__phone">+1 8674 948 94 2</p>
+            <p class="footer__email">info@sitename.ru</p>
+            <p class="footer__hours">Working hours: 8 am - 7 pm</p>
+        </nav>
         <header class="header" id="header">
             <div class="container">
                 <nav class="nav menu">
-                    <a href="#" class="logo jpk-font">
+                    <a href="/" class="logo jpk-font">
                         BS
                     </a>
-                    <a href="#" class="hamburger">
+                    <a href="#" class="hamburger cmd_sidenav_open">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -25,33 +32,77 @@
                 </a>
                 <div class="hero">
                     <div class="hero__left">
-                        <div class="hero__left__motto jpk-font">worth</div>
-                        <div class="hero__left__slogan">
-                            <h1>
-                                we create<br />
-                                the bright future
-                            </h1>
-                        </div>
-                        <div class="hero__left__description">
+                        <p class="hero__left__motto jpk-font">worth</p>
+                        <h1 class="hero__left__slogan">
+                            we create<br />
+                            the bright future
+                        </h1>
+                        <p class="hero__left__description">
                             You can order the best website you`ve ever seen. Seriously.
-                        </div>
+                        </p>
                         <button class="hero__left__contact_button button">contact us</button>
                     </div>
-                    <div class="hero__right jpk-font">
-                        n<span>e</span> xt
-                    </div>
+                    <div class="hero__right jpk-font">n<span>e</span> xt</div>
                 </div>
-                <a href="#" class="scrolldown jpk-font">
+                <a href="#services" class="scrolldown jpk-font">
                     scroll down
                 </a>
             </div>
         </header>
-        <section class="services_section" id="services_section">
-            <div class="container"></div>
+        <section class="services" id="services">
+            <div class="container">
+                <div class="services__title">
+                    <p>we provide</p>
+                    <h2>services</h2>
+                </div>
+                <div class="services__items">
+                    <a class="services__items__item">
+                        <span class="services__items__item__index">01</span>
+                        <i class="icon icon-Starship"></i>
+                        <h3>fast startup launch</h3>
+                        <span class="services__items__item__more">+</span>
+                    </a>
+                    <a class="services__items__item">
+                        <span class="services__items__item__index">02</span>
+                        <i class="icon icon-Cup"></i>
+                        <h3>awesome web design</h3>
+                        <span class="services__items__item__more">+</span>
+                    </a>
+                    <a class="services__items__item">
+                        <span class="services__items__item__index">03</span>
+                        <i class="icon icon-Keyboard"></i>
+                        <h3>breathtaking coding</h3>
+                        <span class="services__items__item__more">+</span>
+                    </a>
+                    <a class="services__items__item">
+                        <span class="services__items__item__index">04</span>
+                        <i class="icon icon-Headset"></i>
+                        <h3>up to date support</h3>
+                        <span class="services__items__item__more">+</span>
+                    </a>
+                </div>
+            </div>
         </section>
         <footer class="footer" id="footer">
-            <div class="container"></div>
+            <div class="container">
+                <a href="/" class="logo footer__logo jpk-font">
+                    BS
+                </a>
+                <p class="footer__copyright">
+                    2017 / all rights reserved
+                </p>
+                <button class="button footer__button">contact us</button>
+                <p class="footer__phone">+1 8674 948 94 2</p>
+                <p class="footer__email">info@sitename.ru</p>
+                <p class="footer__hours">Working hours: 8 am - 7 pm</p>
+                <a href="#header" class="footer__scrollup">↑</a>
+            </div>
         </footer>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"
+        ></script>
         <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
     </body>
 </html>
