@@ -17,8 +17,10 @@ https://wayup-ws-next.surge.sh/
 
 ## Screenshot mobile
 
-![Mobile screenshot](https://i.imgur.com/onkgR62.png)
+### First section
+![Mobile screenshot](https://i.imgur.com/YjLhRrt.png)
 
 ## Screenshot desktop
 
-![Screenshot](https://i.imgur.com/a2IK3Th.png)
+### All sections
+![Screenshot](https://i.imgur.com/WviVLUm.png)
