@@ -1,23 +1,31 @@
 // Desktop first
 
 @media screen and (max-width: 1024px) {
-
     .bookmark {
         display: none;
     }
 
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     .hero {
+        padding-top: 16vh;
         &__left {
-            &__motto {
-                font-size: 30vw;
-                width: auto;
-            }
+            margin-left: auto;
+            margin-right: auto;
             &__slogan {
-                font-size: 5.5vw;
+                &__motto {
+                    font-size: 30vw;
+                    width: auto;
+                }
+
+                &__title {
+                    font-size: 5.5vw;
+                }
             }
             &__description {
-                margin-left: auto;
-                margin-right: auto;
                 text-align: center;
             }
         }
@@ -59,6 +67,14 @@
     }
 }
 
-@media screen and (max-width: 800px) {}
+// @media screen and (max-width: 768px) {
+//     .hero {
+//         &__left {
+//             &__slogan {
+//             }
 
-@media screen and (max-width: 320px) {}
+//             &__description {
+//             }
+//         }
+//     }
+// }

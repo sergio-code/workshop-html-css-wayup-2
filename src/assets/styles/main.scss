@@ -60,6 +60,7 @@ button {
     box-shadow: 0 0 250px #0001c5;
     margin-bottom: 12vmin;
     padding-top: 5%;
+    box-sizing: border-box;
 }
 
 .bookmark {
@@ -189,42 +190,47 @@ button {
 
 .hero {
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8vh;
 
     &__left {
-        position: absolute;
-        top: 25%;
-
-        &__motto {
-            margin: 0;
-            padding: 0;
-            font-size: 17vw;
-            line-height: 0.7em;
-            height: 1em;
-            width: 3em;
-            color: #1b1cc4;
-        }
-
         &__slogan {
-            position: absolute;
-            top: -0.3em;
-            left: 2.7em;
-            font-size: 3vw;
-            line-height: 1.7em;
+            position: relative;
 
-            &::after {
+            &__motto {
+                margin: 0;
+                padding: 0;
+                font-size: 17vw;
+                line-height: 0.7em;
+                height: 1em;
+                width: 3em;
+                color: #1b1cc4;
+                margin-bottom: -0.4em;
+            }
+
+            &__title {
                 position: absolute;
-                top: 0;
-                right: 3.6em;
-                content: "";
-                display: block;
-                border-bottom: 0.1em solid #fff;
-                width: 0.6em;
+                top: -0.3em;
+                left: 2.7em;
+                font-size: 3vw;
+                line-height: 1.7em;
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 3.6em;
+                    content: "";
+                    display: block;
+                    border-bottom: 0.1em solid #fff;
+                    width: 0.6em;
+                }
             }
         }
 
         &__description {
-            margin-top: -5vw;
-            margin-left: 25%;
+            margin-left: auto;
+            margin-right: auto;
             font-size: 17px;
             max-width: 21em;
             font-family: Roboto;
@@ -234,9 +240,6 @@ button {
         }
 
         &__contact_button {
-            // position: absolute;
-            // top: 55vh;
-            // left: 15vw;
             display: block;
             margin: 2em auto 0;
             font-size: 20px;
@@ -245,11 +248,9 @@ button {
     }
 
     &__right {
-        position: absolute;
-        top: 25%;
-        right: 12%;
         margin: 0;
         padding: 0;
+        margin-right: 4%;
         font-size: 17vw;
         color: #fff;
         width: 1.4em;
